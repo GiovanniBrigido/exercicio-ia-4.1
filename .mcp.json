@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "notas": {
+      "type": "stdio",
+      "command": "C:\\Users\\giova\\Aula4\\Exercício_ia-4.1\\.venv\\Scripts\\python.exe",
+      "args": [
+        "C:\\Users\\giova\\Aula4\\Exercício_ia-4.1\\server.py"
+      ],
+      "env": {}
+    }
+  }
+}

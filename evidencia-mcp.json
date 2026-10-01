@@ -1,0 +1,23 @@
+{
+  "transport": "stdio",
+  "command": "python server.py",
+  "timestamp": "2026-10-01T17:34:59+00:00",
+  "server": {
+    "name": "notas",
+    "protocol_version": "2025-11-25"
+  },
+  "list_resources": {
+    "resources": [
+      {
+        "uri": "notas://notas.md",
+        "name": "notas",
+        "mime_type": "text/markdown"
+      }
+    ]
+  },
+  "read_resource": {
+    "uri": "notas://notas.md",
+    "chars": 267,
+    "text": "Organizar exercício 1 e 2 da aula 4.\nOrganizar os pertences da viagem de segunda para BSB.\nIr à consulta odontológica hoje às 16h com toda a documentação necessária.\nEnviar as gravações das aulas para o Chris.\nVerificar no portal da EBC o número do artigo publicado.\n"
+  }
+}
