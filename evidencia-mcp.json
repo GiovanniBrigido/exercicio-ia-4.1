@@ -1,31 +1,10 @@
 {
   "transporte": "stdio",
-  "transport": "stdio",
-  "comando": "python servidor_mcp.py",
-  "timestamp": "2026-10-02T13:01:44+00:00",
-  "servidor": {
-    "nome": "notas",
-    "protocol_version": "2025-11-25"
-  },
-  "list_resources": [
+  "servidor": "servidor_mcp.py",
+  "resources": [
     "notas://notas.md"
   ],
-  "uris": [
-    "notas://notas.md"
-  ],
-  "recursos": [
-    {
-      "uri": "notas://notas.md",
-      "name": "notas",
-      "mime_type": "text/markdown"
-    }
-  ],
-  "read_resource": {
-    "uri": "notas://notas.md",
-    "tamanho": 267,
-    "caracteres": 267,
-    "primeira_linha": "Organizar exercício 1 e 2 da aula 4.",
-    "conteudo": "Organizar exercício 1 e 2 da aula 4.\nOrganizar os pertences da viagem de segunda para BSB.\nIr à consulta odontológica hoje às 16h com toda a documentação necessária.\nEnviar as gravações das aulas para o Chris.\nVerificar no portal da EBC o número do artigo publicado.\n",
-    "text": "Organizar exercício 1 e 2 da aula 4.\nOrganizar os pertences da viagem de segunda para BSB.\nIr à consulta odontológica hoje às 16h com toda a documentação necessária.\nEnviar as gravações das aulas para o Chris.\nVerificar no portal da EBC o número do artigo publicado.\n"
-  }
+  "uri_lida": "notas://notas.md",
+  "conteudo_chars": 267,
+  "primeira_linha": "Organizar exercício 1 e 2 da aula 4."
 }
