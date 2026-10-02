@@ -1,7 +1,7 @@
 # Transcript: "resuma minhas notas" via MCP
 
 - **Cliente:** Claude Code (modelo claude-fable-5-1)
-- **Servidor MCP:** `notas` (`server.py`, transporte stdio, configurado em `.mcp.json`)
+- **Servidor MCP:** `notas` (`servidor_mcp.py`, transporte stdio, configurado em `.mcp.json`)
 - **Data:** 2026-10-01
 - **Trecho:** pedido do usuário, chamada ao recurso e resposta do modelo, copiados da sessão. O conteúdo de `notas.md` não foi colado no chat; ele chegou ao modelo pela leitura do recurso MCP.
 

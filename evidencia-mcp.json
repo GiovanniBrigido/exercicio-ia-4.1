@@ -1,8 +1,8 @@
 {
   "transporte": "stdio",
   "transport": "stdio",
-  "comando": "python server.py",
-  "timestamp": "2026-10-02T12:41:21+00:00",
+  "comando": "python servidor_mcp.py",
+  "timestamp": "2026-10-02T13:01:44+00:00",
   "servidor": {
     "nome": "notas",
     "protocol_version": "2025-11-25"

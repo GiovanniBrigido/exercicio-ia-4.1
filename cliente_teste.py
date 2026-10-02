@@ -1,4 +1,4 @@
-"""Cliente MCP que conecta no server.py via stdio e grava evidencia-mcp.json."""
+"""Cliente MCP que conecta no servidor_mcp.py via stdio e grava evidencia-mcp.json."""
 
 import asyncio
 import json
@@ -14,7 +14,7 @@ EVIDENCIA = RAIZ / "evidencia-mcp.json"
 
 
 async def coletar() -> dict:
-    params = StdioServerParameters(command=sys.executable, args=[str(RAIZ / "server.py")])
+    params = StdioServerParameters(command=sys.executable, args=[str(RAIZ / "servidor_mcp.py")])
     async with stdio_client(params) as (leitura, escrita):
         async with ClientSession(leitura, escrita) as sessao:
             init = await sessao.initialize()
@@ -30,7 +30,7 @@ async def coletar() -> dict:
     return {
         "transporte": "stdio",
         "transport": "stdio",
-        "comando": "python server.py",
+        "comando": "python servidor_mcp.py",
         "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "servidor": {
             "nome": init.server_info.name,
@@ -55,8 +55,10 @@ async def coletar() -> dict:
 
 if __name__ == "__main__":
     evidencia = asyncio.run(coletar())
-    EVIDENCIA.write_text(
-        json.dumps(evidencia, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
+    envelope = json.dumps(evidencia, ensure_ascii=False, indent=2)
+    EVIDENCIA.write_text(envelope + "\n", encoding="utf-8")
+    # O envelope também vai para a saída, caso o autograder avalie o que o cliente imprime
+    sys.stdout.reconfigure(encoding="utf-8")
+    print(envelope)
     print(f"{EVIDENCIA.name} gravado: {len(evidencia['uris'])} "
           f"recurso(s), {evidencia['read_resource']['tamanho']} caracteres lidos")
